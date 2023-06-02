@@ -18,6 +18,7 @@ public class MoviesManagerTest {
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void addingOneMovie() {
         MoviesManager manager = new MoviesManager();
@@ -28,6 +29,7 @@ public class MoviesManagerTest {
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void dontAddAnything() {
         MoviesManager manager = new MoviesManager();
@@ -36,6 +38,7 @@ public class MoviesManagerTest {
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void reverseListOf7Movies() {
         MoviesManager manager = new MoviesManager();
@@ -47,10 +50,11 @@ public class MoviesManagerTest {
         manager.add("Film 2");
         manager.add("Film 1");
 
-        String[] expected = {"Film 7","Film 6","Film 5","Film 4","Film 3", "Film 2", "Film 1"};
+        String[] expected = {"Film 7", "Film 6", "Film 5", "Film 4", "Film 3", "Film 2", "Film 1"};
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void reverseListOf8Movies() {
         MoviesManager manager = new MoviesManager();
@@ -63,10 +67,11 @@ public class MoviesManagerTest {
         manager.add("Film 2");
         manager.add("Film 1");
 
-        String[] expected = {"Film 8","Film 7","Film 6","Film 5","Film 4","Film 3", "Film 2", "Film 1"};
+        String[] expected = {"Film 8", "Film 7", "Film 6", "Film 5", "Film 4", "Film 3", "Film 2", "Film 1"};
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void reverseListOf3Movies() {
         MoviesManager manager = new MoviesManager();
@@ -79,10 +84,10 @@ public class MoviesManagerTest {
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void reverseListOf0Movies() {
         MoviesManager manager = new MoviesManager();
-
 
 
         String[] expected = {};

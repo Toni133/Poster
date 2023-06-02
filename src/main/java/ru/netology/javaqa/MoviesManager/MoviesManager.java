@@ -3,12 +3,14 @@ package ru.netology.javaqa.MoviesManager;
 public class MoviesManager {
     public String[] movies = new String[0];
     private int limit;
-    public MoviesManager(){
+
+    public MoviesManager() {
         this.limit = 5;
 
     }
-    public MoviesManager(int limit){
-           this.limit = limit;
+
+    public MoviesManager(int limit) {
+        this.limit = limit;
     }
 
     public void add(String movie) {
@@ -28,14 +30,14 @@ public class MoviesManager {
         int resultLength;
         if (movies.length < limit) {
             resultLength = movies.length;
-        }else {
+        } else {
             resultLength = limit;
         }
-            String[] tmp = new String[resultLength];
-            for (int i = 0; i < tmp.length; i++) {
-                tmp[i] = movies[movies.length - 1 - i];
-            }
-            return movies;
+        String[] tmp = new String[resultLength];
+        for (int i = 0; i < tmp.length; i++) {
+            tmp[i] = movies[movies.length - 1 - i];
         }
+        return movies;
+    }
 
 }
