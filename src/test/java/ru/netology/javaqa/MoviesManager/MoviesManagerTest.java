@@ -88,6 +88,7 @@ public class MoviesManagerTest {
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void reverseListOf1Movies() {
         MoviesManager manager = new MoviesManager();
